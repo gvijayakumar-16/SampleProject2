@@ -1,0 +1,67 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<script src="~/lib/angular/angular.js"></script>
+<script src="~/js/AngularCode.js"></script>
+<style>
+    .btn-space {
+        margin-left: -5%;
+        background-color: cornflowerblue;
+        font-size: large;
+    }
+</style>
+<h2>Index</h2>
+<div ng-app="blogApp">
+    <div ng-controller="blogController" ng-init="List()" class="divList">
+        <p class="divHead">List of Blogs</p>
+        <table cellpadding="12" class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <b>URL</b>
+                </td>
+            </tr>
+            <tr ng-repeat="blog in blogs">
+                <td>
+                    {{blog.url}}
+                </td>
+                <td>
+                    <input type="button" class="btn btn-warning" value="Update" ng-click="Update(blog)" />
+                    <input type="button" class="btn btn-danger" value="Delete" ng-click="Delete(blog)" />
+                </td>
+            </tr>
+        </table>
+        <div class="form-horizontal" role="form">
+            <div class="container">
+                <div class="row">
+                    <h2>
+                        <span id="spn">Add New Blog</span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">URL:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Url" ng-model="url_text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <input type="button" id="btnSave" class="form-control btn-space" value="Submit" ng-click="Insert()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Hidden("BlogID_")
+
+</div>

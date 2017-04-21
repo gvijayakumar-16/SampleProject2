@@ -1,0 +1,11 @@
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.Domain.deps.json
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\obj\Debug\netcoreapp1.1\Employee.Domain.csprojResolveAssemblyReference.cache
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\obj\Debug\netcoreapp1.1\Employee.Domain.AssemblyInfo.cs
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.Domain.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.Domain.pdb
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.Data.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.DTO.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.Data.pdb
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\bin\Debug\netcoreapp1.1\Employee.DTO.pdb
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\obj\Debug\netcoreapp1.1\Employee.Domain.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.Domain\obj\Debug\netcoreapp1.1\Employee.Domain.pdb
