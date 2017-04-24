@@ -2902,6 +2902,7 @@
         "dependencies": {
           "AutoMapper": "6.0.2",
           "Employee.DTO": "1.0.0",
+          "Employee.DTOImplementation": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "1.1.0",
@@ -2912,6 +2913,15 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
+          "Microsoft.NETCore.App": "1.1.1"
+        }
+      },
+      "Employee.DTOImplementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Employee.DTO": "1.0.0",
           "Microsoft.NETCore.App": "1.1.1"
         }
       }
@@ -8432,6 +8442,11 @@
       "type": "project",
       "path": "../Employee.DTO/Employee.DTO.csproj",
       "msbuildProject": "../Employee.DTO/Employee.DTO.csproj"
+    },
+    "Employee.DTOImplementation/1.0.0": {
+      "type": "project",
+      "path": "../Employee.DTOImplementation/Employee.DTOImplementation.csproj",
+      "msbuildProject": "../Employee.DTOImplementation/Employee.DTOImplementation.csproj"
     }
   },
   "projectFileDependencyGroups": {

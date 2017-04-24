@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Employee.Data.Models;
 using Employee.DTO;
+using Employee.DTOImplementation;
 
 namespace Employee.Data
 {
@@ -8,8 +9,8 @@ namespace Employee.Data
     {
         public Mappings()
         {
-            CreateMap<Blog, BlogDTO>();
-            CreateMap<BlogDTO, Blog>();
+            CreateMap<Blog, IBlogDTO>().ConstructUsing((Blog src) => new BlogDTO());
+            CreateMap<IBlogDTO, Blog>();
         }
     }
 }

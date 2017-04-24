@@ -178,6 +178,32 @@
           }
         }
       },
+      "Microsoft.Extensions.DependencyInjection/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.ComponentModel": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/1.1.1": {
         "type": "package",
         "dependencies": {
@@ -2421,6 +2447,28 @@
         "runtimes/win/native/Microsoft.DiaSymReader.Native.arm.dll",
         "runtimes/win/native/Microsoft.DiaSymReader.Native.x86.dll",
         "runtimes/win8-arm/native/Microsoft.DiaSymReader.Native.arm.dll"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/1.1.0": {
+      "sha512": "meG2tsLdHT0SROqxGBiY8A6XUKlwsQVj1N9cyrS+ZJd1MKhoSaw54KuSH6PmpCB/K/ifkR7o9yVVVamu9XZyeg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/1.1.0",
+      "files": [
+        "Microsoft.Extensions.DependencyInjection.1.1.0.nupkg.sha512",
+        "Microsoft.Extensions.DependencyInjection.nuspec",
+        "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "sha512": "2luhjVaWZd8Wmr2KUJcLNAN+iZgezTyfamLG6Lo5FVYY1LYaS7UFOmNtApHGVIytWWtuXSk4ea0t2Vx0HgF5fg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/1.1.0",
+      "files": [
+        "Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0.nupkg.sha512",
+        "Microsoft.Extensions.DependencyInjection.Abstractions.nuspec",
+        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml"
       ]
     },
     "Microsoft.NETCore.App/1.1.1": {
@@ -7071,6 +7119,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "Microsoft.Extensions.DependencyInjection >= 1.1.0",
       "Microsoft.NETCore.App >= 1.1.1"
     ]
   },
@@ -7097,6 +7146,10 @@
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "1.1.0"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "1.1.1",

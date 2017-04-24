@@ -5,7 +5,8 @@ namespace Employee.Domain.Services
 {
     public interface IBlogService
     {
-        void Save(BlogDTO model);
-        IEnumerable<BlogDTO> GetAllBlogs();
+        void Save(IBlogDTO model);
+        IEnumerable<IBlogDTO> GetAllBlogs();
+        void Delete(int blogId);
     }
 }

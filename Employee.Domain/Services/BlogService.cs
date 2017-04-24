@@ -11,7 +11,7 @@ namespace Employee.Domain.Services
         /// Save the blog to DB
         /// </summary>
         /// <param name="model"></param>
-        public void Save(BlogDTO model)
+        public void Save(IBlogDTO model)
         {
             RepositoryManager.BlogRepository.Save(model);
         }
@@ -20,9 +20,18 @@ namespace Employee.Domain.Services
         /// Get all the blogs
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<BlogDTO> GetAllBlogs()
+        public IEnumerable<IBlogDTO> GetAllBlogs()
         {
             return RepositoryManager.BlogRepository.GetAllBlogs();
+        }
+
+        /// <summary>
+        /// Delete a blog
+        /// </summary>
+        /// <param name="blogId"></param>
+        public void Delete(int blogId)
+        {
+            RepositoryManager.BlogRepository.DeleteBlog(blogId);
         }
     }
 }

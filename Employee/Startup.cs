@@ -29,8 +29,8 @@ namespace Employee
             // Add framework services.
             services.AddMvc();
             services.AddAutoMapper();
-            Domain.IOC.Register.RegisterAllLayers(services);
             services.AddDbContext<BloggingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            Domain.IOC.Register.RegisterAllLayers(services);
             Domain.IOC.Register.AssignServiceProvider(services.BuildServiceProvider());
         }
 

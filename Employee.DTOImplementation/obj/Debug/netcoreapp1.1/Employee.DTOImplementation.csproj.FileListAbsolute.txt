@@ -1,0 +1,9 @@
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\bin\Debug\netcoreapp1.1\Employee.DTOImplementation.deps.json
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\bin\Debug\netcoreapp1.1\Employee.DTOImplementation.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\bin\Debug\netcoreapp1.1\Employee.DTOImplementation.pdb
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\bin\Debug\netcoreapp1.1\Employee.DTO.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\bin\Debug\netcoreapp1.1\Employee.DTO.pdb
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\obj\Debug\netcoreapp1.1\Employee.DTOImplementation.csprojResolveAssemblyReference.cache
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\obj\Debug\netcoreapp1.1\Employee.DTOImplementation.AssemblyInfo.cs
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\obj\Debug\netcoreapp1.1\Employee.DTOImplementation.dll
+C:\Users\vijayakumar.ASI\Documents\Visual Studio 2017\Projects\Employee\Employee.DTOImplementation\obj\Debug\netcoreapp1.1\Employee.DTOImplementation.pdb

@@ -1846,6 +1846,7 @@
         "dependencies": {
           "AutoMapper": "6.0.2",
           "Employee.DTO": "1.0.0",
+          "Employee.DTOImplementation": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "1.1.0",
@@ -1874,6 +1875,7 @@
       },
       "employee.dto/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "1.1.0",
           "Microsoft.NETCore.App": "1.1.1"
         },
         "runtime": {
@@ -1881,6 +1883,18 @@
         },
         "compile": {
           "Employee.DTO.dll": {}
+        }
+      },
+      "employee.dtoimplementation/1.0.0": {
+        "dependencies": {
+          "Employee.DTO": "1.0.0",
+          "Microsoft.NETCore.App": "1.1.1"
+        },
+        "runtime": {
+          "Employee.DTOImplementation.dll": {}
+        },
+        "compile": {
+          "Employee.DTOImplementation.dll": {}
         }
       },
       "libuv/1.9.1": {
@@ -4365,6 +4379,11 @@
       "sha512": ""
     },
     "employee.dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "employee.dtoimplementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

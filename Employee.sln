@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.DTO", "Employee.DT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.Domain", "Employee.Domain\Employee.Domain.csproj", "{9AE07B36-D3BB-444F-B8BB-5392556C0F50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee.DTOImplementation", "Employee.DTOImplementation\Employee.DTOImplementation.csproj", "{14C72FD0-3E59-462D-9C20-5C6433900AA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9AE07B36-D3BB-444F-B8BB-5392556C0F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AE07B36-D3BB-444F-B8BB-5392556C0F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AE07B36-D3BB-444F-B8BB-5392556C0F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C72FD0-3E59-462D-9C20-5C6433900AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C72FD0-3E59-462D-9C20-5C6433900AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C72FD0-3E59-462D-9C20-5C6433900AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C72FD0-3E59-462D-9C20-5C6433900AA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

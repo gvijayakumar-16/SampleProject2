@@ -3,11 +3,6 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <script src="~/lib/angular/angular.js"></script>
 <script src="~/js/AngularCode.js"></script>
 <style>
@@ -25,6 +20,9 @@
             <tr>
                 <td>
                     <b>URL</b>
+                </td>
+                <td>
+                    <b>Actions</b>
                 </td>
             </tr>
             <tr ng-repeat="blog in blogs">
@@ -60,6 +58,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="alert alert-success" ng-show="showSuccessAlert">
+            <button type="button" class="close" data-ng-click="switchBool('showSuccessAlert')">x</button>
+            <strong>Done!</strong> {{successTextAlert}}
+        </div>
+        <div class="alert alert-danger" ng-show="showFailureAlert">
+            <button type="button" class="close" data-ng-click="switchBool('showFailureAlert')">x</button>
+            <strong>Error!</strong> {{failureTextAlert}}
         </div>
     </div>
     @Html.Hidden("BlogID_")

@@ -1,6 +1,8 @@
-﻿namespace Employee.DTO
+﻿using Employee.DTO;
+
+namespace Employee.DTOImplementation
 {
-    public class PostDTO
+    public class PostDTO : IPostDTO
     {
         public int PostId { get; set; }
         public int BlogId { get; set; }

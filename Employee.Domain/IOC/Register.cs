@@ -1,5 +1,4 @@
 ﻿using Employee.Domain.Services;
-using Employee.DTO;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -7,36 +6,30 @@ namespace Employee.Domain.IOC
 {
     public static class Register
     {
-        private static IServiceProvider _serviceProvider;
-
-        public static IServiceProvider ServiceProvider
-        {
-            get { return _serviceProvider; }
-        }
+        private static IServiceProvider _ServiceProvider;
+        public static IServiceProvider ServiceProvider { get { return _ServiceProvider; } }
 
         public static void RegisterAllLayers(IServiceCollection services)
         {
             RegisterServiceLayers(services);
-            RegisterDTOLayers(services);
+            DTO.IOC.Register.RegisterDTOLayers(services);
             Data.IOC.Register.RegisterRepositoryLayers(services);
         }
 
         private static void RegisterServiceLayers(IServiceCollection services)
         {
+            //Register the services
             services.AddScoped<IBlogService, BlogService>();
 
-            services.AddScoped<ServiceManager, ServiceManager>();
+            //Register the manager
+            services.AddSingleton<ServiceManager, ServiceManager>();
         }
 
-        private static void RegisterDTOLayers(IServiceCollection services)
+        public static void AssignServiceProvider(IServiceProvider srvProv)
         {
-            services.AddScoped<ModelManager, ModelManager>();
-        }
-
-        public static void AssignServiceProvider(IServiceProvider serviceProvider)
-        {
-            _serviceProvider = serviceProvider;
-            Data.IOC.Register.AssignServiceProvider(serviceProvider);
+            _ServiceProvider = srvProv;
+            DTO.IOC.Register.AssignServiceProvider(srvProv);
+            Data.IOC.Register.AssignServiceProvider(srvProv);
         }
     }
 }

@@ -16,10 +16,11 @@ app.controller("blogController", function ($scope, $http) {
                 datatype: "json",
                 data: JSON.stringify($scope.Blog)
             }).then(function (response) {
-                alert(response.data);
+                $scope.ShowSuccessMessage(response.data);
+                $scope.url_text = "";
                 $scope.List();
             }, function (e) {
-                alert(e.data);
+                $scope.ShowFailureMessage(e.statusText);
             })
         } else {
             $scope.Blog = {};
@@ -31,11 +32,14 @@ app.controller("blogController", function ($scope, $http) {
                 datatype: "json",
                 data: JSON.stringify($scope.Blog)
             }).then(function (response) {
-                alert(response.data);
+                $scope.ShowSuccessMessage(response.data);
                 $scope.List();
+                $scope.url_text = "";
                 document.getElementById("btnSave").setAttribute("value", "Submit");
                 document.getElementById("btnSave").style.backgroundColor = "cornflowerblue";
                 document.getElementById("spn").innerHTML = "Add New Blog";
+            }, function (e) {
+                $scope.ShowFailureMessage(e.statusText);
             })
         }
     }
@@ -45,8 +49,8 @@ app.controller("blogController", function ($scope, $http) {
             url: "http://localhost:1383/Blogs/Index"
         }).then(function (response) {
             $scope.blogs = response.data;
-        }, function () {
-            alert("Error Occur");
+        }, function (e) {
+            $scope.ShowFailureMessage(e.statusText);
         })
     };
     $scope.Delete = function (Blog) {
@@ -54,10 +58,12 @@ app.controller("blogController", function ($scope, $http) {
             method: "post",
             url: "http://localhost:1383/Blogs/Delete",
             datatype: "json",
-            data: JSON.stringify(Blog)
+            data: JSON.stringify(Blog.blogId)
         }).then(function (response) {
-            alert(response.data);
+            $scope.ShowSuccessMessage(response.data);
             $scope.List();
+        }, function (e) {
+            $scope.ShowFailureMessage(e.statusText);
         })
     };
     $scope.Update = function (Blog) {
@@ -66,5 +72,16 @@ app.controller("blogController", function ($scope, $http) {
         document.getElementById("btnSave").setAttribute("value", "Update");
         document.getElementById("btnSave").style.backgroundColor = "Yellow";
         document.getElementById("spn").innerHTML = "Update Blog Information";
-    }
+    };
+    $scope.switchBool = function (value) {
+        $scope[value] = !$scope[value];
+    };
+    $scope.ShowSuccessMessage = function (messageText) {
+        $scope.successTextAlert = messageText;
+        $scope.showSuccessAlert = true;
+    };
+    $scope.ShowFailureMessage = function (messageText) {
+        $scope.failureTextAlert = e.statusText;
+        $scope.showFailureAlert = true;
+    };
 })  

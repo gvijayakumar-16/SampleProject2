@@ -1,20 +1,22 @@
-﻿namespace Employee.DTO
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace Employee.DTO
 {
     public class ModelManager
     {
-        public BlogDTO BlogDTO
+        public IBlogDTO BlogDTO
         {
             get
             {
-                return new BlogDTO();
+                return IOC.Register.ServiceProvider.CreateScope().ServiceProvider.GetService<IBlogDTO>(); ;
             }
         }
 
-        public PostDTO PostDTO
+        public IPostDTO PostDTO
         {
             get
             {
-                return new PostDTO();
+                return IOC.Register.ServiceProvider.CreateScope().ServiceProvider.GetService<IPostDTO>(); ;
             }
         }
     }

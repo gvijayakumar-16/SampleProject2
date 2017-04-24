@@ -6,15 +6,9 @@ namespace Employee.Data
 {
     public class RepositoryManager
     {
-        private IServiceProvider _ServiceProvider;
-        public RepositoryManager(IServiceProvider srvProv)
+        public IBlogRepository BlogRepository
         {
-            _ServiceProvider = srvProv;
-        }
-
-        public BlogRepository BlogRepository
-        {
-            get { return _ServiceProvider.GetService<BlogRepository>(); }
+            get { return IOC.Register.ServiceProvider.CreateScope().ServiceProvider.GetService<IBlogRepository>(); }
         }
     }
 }

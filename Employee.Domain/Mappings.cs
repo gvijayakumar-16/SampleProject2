@@ -8,8 +8,7 @@ namespace Employee.Domain
     {
         public Mappings()
         {
-            CreateMap<Blog, BlogDTO>();
-            CreateMap<BlogDTO, Blog>();
+            
         }
     }
 }

@@ -6,22 +6,21 @@ namespace Employee.Data.IOC
 {
     public static class Register
     {
-        private static IServiceProvider _serviceProvider;
-        public static IServiceProvider ServiceProvider
-        {
-            get { return _serviceProvider; }
-        }
-
         public static void RegisterRepositoryLayers(IServiceCollection services)
         {
-            services.AddScoped<RepositoryManager, RepositoryManager>();
-
-            services.AddScoped<BlogRepository, BlogRepository>();
+            services.AddSingleton<RepositoryManager, RepositoryManager>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            DTOImplementation.IOC.Register.RegisterDTOImplementationLayers(services);
         }
 
-        public static void AssignServiceProvider(IServiceProvider serviceProvider)
+        private static IServiceProvider _ServiceProvider;
+
+        public static IServiceProvider ServiceProvider { get { return _ServiceProvider; } }
+
+        public static void AssignServiceProvider(IServiceProvider srvProv)
         {
-            _serviceProvider = serviceProvider;
+            _ServiceProvider = srvProv;
+            DTOImplementation.IOC.Register.AssignServiceProvider(srvProv);
         }
     }
 }
